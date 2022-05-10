@@ -1,7 +1,7 @@
-package tddClass;
-
-public class Account3 {
-    public int getTotalBalance() {
-        return 0;
-    }
-}
+//package tddClass;
+//
+//public class Account3 {
+//    public int getTotalBalance() {
+//        return 0;
+//    }
+//}

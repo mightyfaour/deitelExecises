@@ -52,4 +52,51 @@ public class Kata {
             return false;
 
     }
+
+    public boolean isEvenNumber(int number) {
+        if (number % 2 == 0){
+            return true;
+        }else if (number % 2 == 1){
+            return false;
+        }else return false;
+    }
+
+
+    public int biggestNumber(int digit0, int digit1, int digit2, int digit3, int digit4) {
+        int biggestNumber = digit0;
+        if (digit1 > biggestNumber){biggestNumber = digit1;}
+        if (digit2 > biggestNumber){biggestNumber = digit2;}
+        if (digit3 > biggestNumber){biggestNumber = digit3;}
+        if (digit4 > biggestNumber){biggestNumber = digit4;}
+        return biggestNumber;
+        }
+
+
+    public int Ddatatype(int digit ) {
+        int countMultiples = 0;
+        for (int i = 1; i <= digit; i++){
+            if (digit % i == 0){
+                ++countMultiples;
+            }
+        }return countMultiples;
+    }
+
+    public boolean PrimeNumber(int digit) {
+
+//        int prime =0;
+//        for (int i = 1; i <= digit; i++){
+//            if (digit % i == 0){
+//                ++prime;
+//            }
+//        }
+//        if (prime <= 2){
+//            return true;
+//        }
+//        return false;
+        if (Ddatatype(digit) <= 2)return true;
+        return false;
+
+    }
+
+
 }

@@ -50,9 +50,33 @@ public class KataTest {
         assertEquals(true, result);
     }
 
+    @Test
+    public void testOfEvenNumber(){
+        Kata godds = new Kata();
+        boolean result = godds.isEvenNumber(3);
+        assertEquals(false, result);
+    }
+    
+    @Test
+    public void testToCheckTheBiggestNumber() {
+        Kata godds = new Kata();
+         godds.biggestNumber(5,8,9,15,9);
+         assertEquals(99, godds.biggestNumber(55,78,9,15,99));
+    }
 
+    @Test
+    public void testToReturnAmountOfDatatype (){
+        Kata godds = new Kata();
+        int result = godds.Ddatatype(49);
+        assertEquals(3, result);
 
+    }
 
+    @Test
+    public void testForPrimeNumbers() {
+        Kata godds = new Kata();
+        boolean result = godds.PrimeNumber(89);
+        assertEquals(true, result);
+    }
 
 }
-

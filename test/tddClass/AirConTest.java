@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class AirConTest {
+
+
     @Test
     public void createAirConTest(){
         AirCon godds = new AirCon();
@@ -30,7 +32,10 @@ public class AirConTest {
         godds.turnOn();
         godds.increaseTemp();
         godds.increaseTemp();
-        assertEquals(2,godds.getTemp());
+        godds.increaseTemp();
+        godds.increaseTemp();
+        godds.increaseTemp();
+        assertEquals(21,godds.getTemp());
     }
     @Test
     public void decreaseTempTest(){
@@ -43,7 +48,7 @@ public class AirConTest {
         godds.increaseTemp();
         godds.decreaseTemp();
         godds.decreaseTemp();
-        assertEquals(3,godds.getTemp());
+        assertEquals(19,godds.getTemp());
     }
     @Test
     public void incresTempBeyond30Test(){
@@ -63,26 +68,35 @@ public class AirConTest {
         godds.increaseTemp();
         godds.increaseTemp();
         godds.increaseTemp();
-        godds.increaseTemp();
-        godds.increaseTemp();
-        godds.increaseTemp();
-        godds.increaseTemp();
-        godds.increaseTemp();
-        godds.increaseTemp();
-        godds.increaseTemp();
-        godds.increaseTemp();
-        godds.increaseTemp();
-        godds.increaseTemp();
-        godds.increaseTemp();
-        godds.increaseTemp();
-        godds.increaseTemp();
-        godds.increaseTemp();
-        godds.increaseTemp();
-        godds.increaseTemp();
+
         assertEquals(30, godds.getTemp());
 
     }
 
+
+    @Test
+    public void TempCantGoBelow16() {
+        AirCon godds = new AirCon();
+        godds.turnOn();
+        int increaseTemp = 16;
+        while (increaseTemp < 21){
+            godds.increaseTemp();
+            increaseTemp++;
+        }
+
+//        godds.increaseTemp();
+//        godds.increaseTemp();
+//        godds.increaseTemp();
+//        godds.increaseTemp();
+        godds.decreaseTemp();
+        godds.decreaseTemp();
+        godds.decreaseTemp();
+        godds.decreaseTemp();
+        godds.decreaseTemp();
+        godds.decreaseTemp();
+        assertEquals(16,godds.getTemp());
+
+    }
 
 
 

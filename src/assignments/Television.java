@@ -8,7 +8,7 @@ public class Television {
     private boolean disconnectOnline;
 
 
-    public void setisOn() {
+    public void turnOn() {
         if(!isOn)
         {isOn = true;
         }else if(isOn){

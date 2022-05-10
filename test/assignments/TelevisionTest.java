@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TelevisionTest {
+
         @Test
         public void tvExistsTest() {
 
@@ -15,16 +16,16 @@ class TelevisionTest {
         @Test
         public void testThatTvIsOn() {
             Television tv = new Television();
-            tv.setisOn();
+            tv.turnOn();
             assertTrue(tv.isOn());
         }
 
         @Test
         public void testThatTvIsOnOff() {
             Television tv = new Television();
-            tv.setisOn();
+            tv.turnOn();
             assertTrue(tv.isOn());
-            tv.setisOn();
+            tv.turnOn();
             assertFalse(tv.isOn());
         }
 
@@ -32,7 +33,7 @@ class TelevisionTest {
         @Test
         public void testThatVolumeCanBeIncreased() {
             Television tv = new Television();
-            tv.setisOn();
+            tv.turnOn();
             int volume = 1;
             while (volume <= 100) {
                 tv.increaseVolume();
@@ -44,7 +45,7 @@ class TelevisionTest {
         @Test
         public void testThatVolumeCanBeDecrease() {
             Television tv = new Television();
-            tv.setisOn();
+            tv.turnOn();
             int increaseVolume = 0;
             while (increaseVolume < 10) {
                 tv.increaseVolume();
@@ -91,7 +92,7 @@ class TelevisionTest {
         @Test
         public void testThatSationCanBeDecrease() {
             Television tv = new Television();
-            tv.setisOn();
+            tv.turnOn();
             tv.increaseStation();
             tv.increaseStation();
             tv.increaseStation();
@@ -129,7 +130,7 @@ class TelevisionTest {
         @Test
         public void testThatTvConnectsOnline() {
             Television tv = new Television();
-            tv.setisOn();
+            tv.turnOn();
             tv.toggleConnector();
             assertEquals(true, tv.getconnected());
         }
@@ -137,7 +138,7 @@ class TelevisionTest {
         @Test
         public void testThatTvDisconnectsFromOnline() {
             Television tv = new Television();
-            tv.setisOn();
+            tv.turnOn();
             tv.toggleDisconnector();
             assertEquals(false, tv.getdisconnected());
         }
