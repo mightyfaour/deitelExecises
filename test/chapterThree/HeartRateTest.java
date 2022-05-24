@@ -73,6 +73,5 @@ public class HeartRateTest {
 
         assertEquals(214,personalInformation.getMaximumHeartRate());
 
-
     }
 }
