@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class GasMileageTest {
+public class    GasMileageTest {
     @Test
     public void canCalculateMilesPerGallonTest (){
         GasMileage gasMileage = new GasMileage (100, 20);
